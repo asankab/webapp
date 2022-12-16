@@ -33,10 +33,11 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
     
-
-- task: CopyPublishBuildArtifacts@1
+- task: PublishBuildArtifacts@1
   inputs:
-    Contents: '$(build.artifactstagingdirectory)'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
-    ArtifactType: 'Container'
+    publishLocation: 'Container'
+    StoreAsTar: true
+
 
