@@ -20,10 +20,10 @@ steps:
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '$(solution)'
-- task: WhiteSource@21
-  inputs:
-    cwd: '$(System.DefaultWorkingDirectory)'
-    projectName: 'dotnetmvc-webapp'
+# - task: WhiteSource@21
+#   inputs:
+#     cwd: '$(System.DefaultWorkingDirectory)'
+#     projectName: 'dotnetmvc-webapp'
 # sonar analysis prep
 
 - task: VSBuild@1
